@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    transition: 1s ease;
+}
+.contenar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 170px;
+}
+.game{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 300px;
+    border-radius: 20px;
+    background-color: rgba(24, 20, 20, 0.527);
+}
+.btn{
+    overflow: hidden;
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.im{
+    height: 50px;
+    width: 50px;
+}
+
+.score{
+    transition: 1s ease;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+    background-color: rgba(0, 0, 0, 0.527);
+    height: 100px;
+    width: 200px;
+    border-radius: 15px;
+    margin: auto;
+    opacity: 0;
+}
+.r-btn{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    margin: 3px;
+}
+.l-btn{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    margin: 3px;
+}
+h2{
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    right: 85px;
+}
+h5{
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+.c{
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+}
+.l{
+    bottom: 20px;
+    right: 53px;
+    color: red;
+}
+#w{
+    bottom: 20px;
+    right: 53px;
+    color: rgb(19, 238, 19);
+}
