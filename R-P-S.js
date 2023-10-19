@@ -1,11 +1,12 @@
 //all the commented lines are the lines that I used, to mack this game but after that when I used css to style this game those codes were unnecessary
+function visible(){let hid = document.getElementById("hidden").style.opacity="1";}
 function click_1(){
     const randomNumber = Math.random();
     // let computerMove = '';
     document.body.style.backgroundColor="rgb(53, 137, 233)";
         if(randomNumber>=0 && randomNumber<1/3){
             // computerMove = 'Rock';
-            document.getElementById("h").style.opacity="1";
+            visible();
             document.querySelector(`.score`).innerHTML = `
         <div class="btn l-btn">
             <img class="im" src="r-logo - Copy.jpeg" alt="Rock">
@@ -13,12 +14,12 @@ function click_1(){
         <div class="btn r-btn">
             <img id="rim" class="im" src="r-logo-cR.jpeg" alt="Rock">
         </div>
-        <h2>Tie</h2>
-        <h5>You</h5>
-        <h5 class="c">Com..</h5>`
+        <h1 id="tie">Tie</h1>
+        <h3>You</h3>
+        <h3 class="com_Move">Computer</h3>`
         }else if (randomNumber>=1/3 && randomNumber<2/3){
             // computerMove = 'Paper';
-            document.getElementById("h").style.opacity="1";
+            visible();
             document.querySelector(`.score`).innerHTML = `
         <div class="btn l-btn">
             <img class="im" src="p-logo (2)cP.jpeg" alt="Paper">
@@ -26,12 +27,12 @@ function click_1(){
         <div class="btn r-btn">
             <img id="rim" class="im" src="r-logo-cR.jpeg" alt="Rock">
         </div>
-        <h2 class="l">You Lose</h2>
-        <h5>You</h5>
-        <h5 class="c">Com..</h5>`
+        <h1 id="lose">You Lose</h1>
+        <h3>You</h3>
+        <h3 class="com_Move">Computer</h3>`
         }else{
             // computerMove = 'Scissors';
-            document.getElementById("h").style.opacity="1";
+            visible();
             document.querySelector(`.score`).innerHTML = `
         <div class="btn l-btn">
             <img class="im" src="s-logocS.jpeg" alt="Scissors">
@@ -39,9 +40,9 @@ function click_1(){
         <div class="btn r-btn">
             <img id="rim" class="im" src="r-logo-cR.jpeg" alt="Rock">
         </div>
-        <h2 id="w" class="l">You Win</h2>
-        <h5>You</h5>
-        <h5 class="c">Com..</h5>`
+        <h1 id="win">You Win</h1>
+        <h3>You</h3>
+        <h3 class="com_Move">Computer</h3>`
         }
 
         // let result ='';
@@ -62,7 +63,7 @@ function click_2(){
     document.body.style.backgroundColor="yellow";
         if(randomNumber>=0 && randomNumber<1/3){
             computerMove = 'Rock';
-            document.getElementById("h").style.opacity="1";
+            visible();
             document.querySelector(`.score`).innerHTML = `
         <div class="btn l-btn">
             <img class="im" src="r-logo - Copy.jpeg" alt="Rock">
@@ -70,12 +71,12 @@ function click_2(){
         <div class="btn r-btn">
             <img id="rim" class="im" src="cP.jpeg" alt="Paper">
         </div>
-        <h2 id="w" class="l">You Win</h2>
-        <h5>You</h5>
-        <h5 class="c">Com..</h5>`
+        <h1 id="win">You Win</h1>
+        <h3>You</h3>
+        <h3 class="com_Move">Computer</h3>`
         }else if (randomNumber>=1/3 && randomNumber<2/3){
             // computerMove = 'Paper';
-            document.getElementById("h").style.opacity="1";
+            visible();
             document.querySelector(`.score`).innerHTML = `
         <div class="btn l-btn">
             <img class="im" src="p-logo (2)cP.jpeg" alt="Rock">
@@ -83,12 +84,12 @@ function click_2(){
         <div class="btn r-btn">
             <img id="rim" class="im" src="cP.jpeg" alt="Rock">
         </div>
-        <h2>Tie</h2>
-        <h5>You</h5>
-        <h5 class="c">Com..</h5>`
+        <h1 id="tie">Tie</h1>
+        <h3>You</h3>
+        <h3 class="com_Move">Computer</h3>`
         }else{
             // computerMove = 'Scissors';
-            document.getElementById("h").style.opacity="1";
+            visible();
             document.querySelector(`.score`).innerHTML = `
         <div class="btn l-btn">
             <img class="im" src="s-logocS.jpeg" alt="Paper">
@@ -96,9 +97,9 @@ function click_2(){
         <div class="btn r-btn">
             <img id="rim" class="im" src="cP.jpeg" alt="Rock">
         </div>
-        <h2 class="l">You Lose</h2>
-        <h5>You</h5>
-        <h5 class="c">Com..</h5>`
+        <h1 id="lose">You Lose</h1>
+        <h3>You</h3>
+        <h3 class="com_Move">Computer</h3>`
         }
 
         // result ='';
@@ -118,7 +119,7 @@ function click_3(){
     document.body.style.backgroundColor="red";
         if(randomNumber>=0 && randomNumber<1/3){
             // computerMove = 'Rock';
-            document.getElementById("h").style.opacity="1";
+            visible();
             document.querySelector(`.score`).innerHTML = `
         <div class="btn l-btn">
             <img class="im" src="r-logo - Copy.jpeg" alt="Paper">
@@ -126,12 +127,12 @@ function click_3(){
         <div class="btn r-btn">
             <img id="rim" class="im" src="s-logocS (2).jpeg" alt="Rock">
         </div>
-        <h2 class="l">You Lose</h2>
-        <h5>You</h5>
-        <h5 class="c">Com..</h5>`
+        <h1 id="lose">You Lose</h1>
+        <h3>You</h3>
+        <h3 class="com_Move">Computer</h3>`
         }else if (randomNumber>=1/3 && randomNumber<2/3){
             // computerMove = 'Paper';
-            document.getElementById("h").style.opacity="1";
+            visible();
             document.querySelector(`.score`).innerHTML = `
         <div class="btn l-btn">
             <img class="im" src="p-logo (2)cP.jpeg" alt="Rock">
@@ -139,12 +140,12 @@ function click_3(){
         <div class="btn r-btn">
             <img id="rim" class="im" src="s-logocS (2).jpeg" alt="Paper">
         </div>
-        <h2 id="w" class="l">You Win</h2>
-        <h5>You</h5>
-        <h5 class="c">Com..</h5>`
+        <h1 id="win">You Win</h1>
+        <h3>You</h3>
+        <h3 class="com_Move">Computer</h3>`
         }else{
             // computerMove = 'Scissors';
-            document.getElementById("h").style.opacity="1";
+            visible();
             document.querySelector(`.score`).innerHTML = `
         <div class="btn l-btn">
             <img class="im" src="s-logocS.jpeg" alt="Rock">
@@ -152,9 +153,9 @@ function click_3(){
         <div class="btn r-btn">
             <img id="rim" class="im" src="s-logocS (2).jpeg" alt="Rock">
         </div>
-        <h2>Tie</h2>
-        <h5>You</h5>
-        <h5 class="c">Com..</h5>`
+        <h1 id="tie">Tie</h1>
+        <h3>You</h3>
+        <h3 class="com_Move">Computer</h3>`
         }
 
         // result ='';
