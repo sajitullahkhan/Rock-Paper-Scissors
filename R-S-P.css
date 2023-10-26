@@ -32,6 +32,7 @@ body{
     justify-content: center;
     margin: 25px;
     border: 1px solid black;
+    cursor: pointer;
 }
 .im{
     height: 100px;
@@ -48,7 +49,6 @@ body{
     width: 400px;
     border-radius: 15px;
     margin: auto;
-    /* opacity: 0; */
 }
 .r-btn{
     position: absolute;
@@ -142,6 +142,7 @@ h3{
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
     color: rgb(0, 0, 0);
+    cursor: pointer;
 }
 
 #re-btn::before{
@@ -164,4 +165,35 @@ h3{
 
 #re-btn:hover{
     color: white;
+}
+.l-btn>.im{
+    animation-name: rot;
+        animation-duration: .5s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+}
+@keyframes rot{
+    0%{
+        opacity: 0;
+        rotate: -180deg;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#rim{
+    animation-name: R-rot;
+        animation-duration: .5s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+
+}
+@keyframes R-rot{
+    0%{
+        opacity: 0;
+        rotate: 180deg;
+    }
+    100%{
+        opacity: 1;
+    }
 }
