@@ -101,9 +101,9 @@ function reset_click(){
     document.querySelector(`.l-btn`).innerHTML =``;
     document.querySelector(`.r-btn`).innerHTML =``;
     document.getElementById(`wlt`).innerHTML =``;
-    scores.Win= 0;
-    scores.Lose= 0;
-    scores.Tie= 0;
+    scores.Win= null;
+    scores.Lose= null;
+    scores.Tie= null;
     document.querySelector(`.w`).innerHTML = scores.Win;
     document.querySelector(`.l`).innerHTML = scores.Lose;
     document.querySelector(`.t`).innerHTML = scores.Tie;
