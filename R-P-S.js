@@ -1,172 +1,110 @@
-//all the commented lines are the lines that I used, to mack this game but after that when I used css to style this game those codes were unnecessary
-function visible(){let hid = document.getElementById("hidden").style.opacity="1";}
-function click_1(){
+let scores = {
+    Win: 0,
+    Lose: 0,
+    Tie: 0
+}
+function click_1() {
     const randomNumber = Math.random();
-    // let computerMove = '';
-    document.body.style.backgroundColor="rgb(53, 137, 233)";
-        if(randomNumber>=0 && randomNumber<1/3){
-            // computerMove = 'Rock';
-            visible();
-            document.querySelector(`.score`).innerHTML = `
-        <div class="btn l-btn">
-            <img class="im" src="r-logo - Copy.jpeg" alt="Rock">
-        </div>
-        <div class="btn r-btn">
-            <img id="rim" class="im" src="r-logo-cR.jpeg" alt="Rock">
-        </div>
-        <h1 id="tie">Tie</h1>
-        <h3>You</h3>
-        <h3 class="com_Move">Computer</h3>`
-        }else if (randomNumber>=1/3 && randomNumber<2/3){
-            // computerMove = 'Paper';
-            visible();
-            document.querySelector(`.score`).innerHTML = `
-        <div class="btn l-btn">
-            <img class="im" src="p-logo (2)cP.jpeg" alt="Paper">
-        </div>
-        <div class="btn r-btn">
-            <img id="rim" class="im" src="r-logo-cR.jpeg" alt="Rock">
-        </div>
-        <h1 id="lose">You Lose</h1>
-        <h3>You</h3>
-        <h3 class="com_Move">Computer</h3>`
-        }else{
-            // computerMove = 'Scissors';
-            visible();
-            document.querySelector(`.score`).innerHTML = `
-        <div class="btn l-btn">
-            <img class="im" src="s-logocS.jpeg" alt="Scissors">
-        </div>
-        <div class="btn r-btn">
-            <img id="rim" class="im" src="r-logo-cR.jpeg" alt="Rock">
-        </div>
-        <h1 id="win">You Win</h1>
-        <h3>You</h3>
-        <h3 class="com_Move">Computer</h3>`
-        }
+    document.body.style.backgroundColor = "rgb(53, 137, 233)";
+    if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        scores.Tie += 1;
+        document.querySelector(`.l-btn`).innerHTML = `
+            <img class="im" src="r-logo - Copy.jpeg" alt="Rock">`
+        document.querySelector(`.r-btn`).innerHTML = `
+            <img id="rim" class="im" src="r-logo-cR.jpeg" alt="Rock">`
+        document.querySelector(`.t`).innerHTML = scores.Tie;
+        document.getElementById(`wlt`).innerHTML = `<h1 id="tie">Tie</h1>`;
+    } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        scores.Lose += 1;
+        document.querySelector(`.l-btn`).innerHTML = `
+            <img class="im" src="p-logo (2)cP.jpeg" alt="Paper">`
+        document.querySelector(`.r-btn`).innerHTML = `
+            <img id="rim" class="im" src="r-logo-cR.jpeg" alt="Rock">`
+        document.querySelector(`.l`).innerHTML = scores.Lose;
+        document.getElementById(`wlt`).innerHTML = `<h1 id="lose">You Lose</h1>`;
+    } else {
+        scores.Win += 1;
+        document.querySelector(`.l-btn`).innerHTML = `
+            <img class="im" src="s-logocS.jpeg" alt="Scissors">`
 
-        // let result ='';
-        // if(computerMove === 'Rock'){
-        //     result = 'Tie'
-        // }else if(computerMove === 'Paper'){
-        //     result = 'You lose'
-        // }else if(computerMove === 'Scissors'){
-        //     result = 'You Win'
-        // }
-        
-        // alert(`You picked Rock. Computer picked ${computerMove}. ${result}`)
+        document.querySelector(`.r-btn`).innerHTML = `
+            <img id="rim" class="im" src="r-logo-cR.jpeg" alt="Rock">`
+        document.querySelector(`.w`).innerHTML = scores.Win;
+        document.getElementById(`wlt`).innerHTML = `<h1 id="win">You Win</h1>`;
+    }
 }
 
-function click_2(){
-    randomNumber = Math.random();
-    // computerMove = '';
-    document.body.style.backgroundColor="yellow";
-        if(randomNumber>=0 && randomNumber<1/3){
-            computerMove = 'Rock';
-            visible();
-            document.querySelector(`.score`).innerHTML = `
-        <div class="btn l-btn">
-            <img class="im" src="r-logo - Copy.jpeg" alt="Rock">
-        </div>
-        <div class="btn r-btn">
-            <img id="rim" class="im" src="cP.jpeg" alt="Paper">
-        </div>
-        <h1 id="win">You Win</h1>
-        <h3>You</h3>
-        <h3 class="com_Move">Computer</h3>`
-        }else if (randomNumber>=1/3 && randomNumber<2/3){
-            // computerMove = 'Paper';
-            visible();
-            document.querySelector(`.score`).innerHTML = `
-        <div class="btn l-btn">
-            <img class="im" src="p-logo (2)cP.jpeg" alt="Rock">
-        </div>
-        <div class="btn r-btn">
-            <img id="rim" class="im" src="cP.jpeg" alt="Rock">
-        </div>
-        <h1 id="tie">Tie</h1>
-        <h3>You</h3>
-        <h3 class="com_Move">Computer</h3>`
-        }else{
-            // computerMove = 'Scissors';
-            visible();
-            document.querySelector(`.score`).innerHTML = `
-        <div class="btn l-btn">
-            <img class="im" src="s-logocS.jpeg" alt="Paper">
-        </div>
-        <div class="btn r-btn">
-            <img id="rim" class="im" src="cP.jpeg" alt="Rock">
-        </div>
-        <h1 id="lose">You Lose</h1>
-        <h3>You</h3>
-        <h3 class="com_Move">Computer</h3>`
-        }
+function click_2() {
+    const randomNumber = Math.random();
+    document.body.style.backgroundColor = "yellow";
+    if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        scores.Win += 1;
+        document.querySelector(`.l-btn`).innerHTML = `
+            <img class="im" src="r-logo - Copy.jpeg" alt="Rock">`
+        document.querySelector(`.r-btn`).innerHTML = `
+            <img id="rim" class="im" src="cP.jpeg" alt="Paper">`
+        document.querySelector(`.w`).innerHTML = scores.Win;
+        document.getElementById(`wlt`).innerHTML = `<h1 id="win">You Win</h1>`;
+    } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        scores.Tie += 1;
+        document.querySelector(`.l-btn`).innerHTML = `
+            <img class="im" src="p-logo (2)cP.jpeg" alt="Paper">`
+        document.querySelector(`.r-btn`).innerHTML = `
+            <img id="rim" class="im" src="cP.jpeg" alt="Paper">`
+        document.querySelector(`.t`).innerHTML = scores.Tie;
+        document.getElementById(`wlt`).innerHTML = `<h1 id="tie">Tie</h1>`;
+    } else {
+        scores.Lose += 1;
+        document.querySelector(`.l-btn`).innerHTML = `
+            <img class="im" src="s-logocS.jpeg" alt="Scissors">`
 
-        // result ='';
-        // if(computerMove === 'Rock'){
-        //     result = 'You Win'
-        // }else if(computerMove === 'Paper'){
-        //     result = 'Tie'
-        // }else if(computerMove === 'Scissors'){
-        //     result = 'You lose'
-        // }
-        // alert(`You picked Paper. Computer picked ${computerMove}. ${result}`)
+        document.querySelector(`.r-btn`).innerHTML = `
+        <img id="rim" class="im" src="cP.jpeg" alt="Paper">`
+        document.querySelector(`.l`).innerHTML = scores.Lose;
+        document.getElementById(`wlt`).innerHTML = `<h1 id="lose">You Lose</h1>`;
+    }
 }
 
-function click_3(){
-    randomNumber = Math.random();
-    computerMove = '';
-    document.body.style.backgroundColor="red";
-        if(randomNumber>=0 && randomNumber<1/3){
-            // computerMove = 'Rock';
-            visible();
-            document.querySelector(`.score`).innerHTML = `
-        <div class="btn l-btn">
-            <img class="im" src="r-logo - Copy.jpeg" alt="Paper">
-        </div>
-        <div class="btn r-btn">
-            <img id="rim" class="im" src="s-logocS (2).jpeg" alt="Rock">
-        </div>
-        <h1 id="lose">You Lose</h1>
-        <h3>You</h3>
-        <h3 class="com_Move">Computer</h3>`
-        }else if (randomNumber>=1/3 && randomNumber<2/3){
-            // computerMove = 'Paper';
-            visible();
-            document.querySelector(`.score`).innerHTML = `
-        <div class="btn l-btn">
-            <img class="im" src="p-logo (2)cP.jpeg" alt="Rock">
-        </div>
-        <div class="btn r-btn">
-            <img id="rim" class="im" src="s-logocS (2).jpeg" alt="Paper">
-        </div>
-        <h1 id="win">You Win</h1>
-        <h3>You</h3>
-        <h3 class="com_Move">Computer</h3>`
-        }else{
-            // computerMove = 'Scissors';
-            visible();
-            document.querySelector(`.score`).innerHTML = `
-        <div class="btn l-btn">
-            <img class="im" src="s-logocS.jpeg" alt="Rock">
-        </div>
-        <div class="btn r-btn">
-            <img id="rim" class="im" src="s-logocS (2).jpeg" alt="Rock">
-        </div>
-        <h1 id="tie">Tie</h1>
-        <h3>You</h3>
-        <h3 class="com_Move">Computer</h3>`
-        }
+function click_3() {
+    const randomNumber = Math.random();
+    document.body.style.backgroundColor = "red";
+    if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        scores.Lose += 1;
+        document.querySelector(`.l-btn`).innerHTML = `
+            <img class="im" src="r-logo - Copy.jpeg" alt="Rock">`
+        document.querySelector(`.r-btn`).innerHTML = `
+            <img id="rim" class="im" src="s-logocS (2).jpeg" alt="Scissors">`
+        document.querySelector(`.l`).innerHTML = scores.Lose;
+        document.getElementById(`wlt`).innerHTML = `<h1 id="lose">You Lose</h1>`;
+    } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        scores.Win += 1;
+        document.querySelector(`.l-btn`).innerHTML = `
+        <img class="im" src="p-logo (2)cP.jpeg" alt="Paper">`
+        document.querySelector(`.r-btn`).innerHTML = `
+        <img id="rim" class="im" src="s-logocS (2).jpeg" alt="Scissors">`
+        document.querySelector(`.w`).innerHTML = scores.Win;
+        document.getElementById(`wlt`).innerHTML = `<h1 id="win">You Win</h1>`;
+    } else {
+        scores.Tie += 1;
+        document.querySelector(`.l-btn`).innerHTML = `
+            <img class="im" src="s-logocS.jpeg" alt="Scissors">`
 
-        // result ='';
-        // if(computerMove === 'Rock'){
-        //     result = 'You lose'
-        // }else if(computerMove === 'Paper'){
-        //     result = 'You Win'
-        // }else if(computerMove === 'Scissors'){
-        //     result = 'Tie'
-        // }
-        // alert(`You picked Scissors. Computer picked ${computerMove}. ${result}`)
+        document.querySelector(`.r-btn`).innerHTML = `
+        <img id="rim" class="im" src="s-logocS (2).jpeg" alt="Scissors">`
+        document.querySelector(`.t`).innerHTML = scores.Tie;
+        document.getElementById(`wlt`).innerHTML = `<h1 id="tie">Tie</h1>`;
+    }
 }
 
+function reset_click(){
+    document.querySelector(`.l-btn`).innerHTML =``
+    document.querySelector(`.r-btn`).innerHTML =``
+    document.getElementById(`wlt`).innerHTML =``
+    scores.Win= 0;
+    scores.Lose= 0;
+    scores.Tie= 0;
+    document.querySelector(`.w`).innerHTML = scores.Win;
+    document.querySelector(`.l`).innerHTML = scores.Lose;
+    document.querySelector(`.t`).innerHTML = scores.Tie;
+}
 
