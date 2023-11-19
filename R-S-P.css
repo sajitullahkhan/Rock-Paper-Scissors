@@ -71,12 +71,6 @@ body{
     height: 60px;
 }
 
-/* .r-btn{
-    margin: 3px;
-}
-.l-btn{
-    margin: 3px;
-} */
 h1{
     position: absolute;
 
@@ -217,5 +211,4 @@ h3{
     #wlt{
         font-size: 4vw;
     }
-    
 }
