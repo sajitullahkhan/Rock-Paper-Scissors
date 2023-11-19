@@ -7,6 +7,15 @@ body{
     transition: 1s ease;
     background-color: aquamarine;
 }
+
+#all{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 100%;
+    gap: 50px;
+    place-items: center;
+
+}
 .contenar{
     display: flex;
     align-items: center;
@@ -93,11 +102,6 @@ h3{
     color: rgb(19, 238, 19);
 }
 
-#all{
-    position: relative;
-    top: 300px;
-}
-
 #sC{
     display: flex;
     align-items: center;
@@ -128,9 +132,6 @@ h3{
 }
 
 #re-btn{
-    position: relative;
-    left: 45vmax;
-    top: 15vmin;
     height: 60px;
     width: 200px;
     background: transparent;
