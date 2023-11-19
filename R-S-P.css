@@ -9,8 +9,9 @@ body{
 }
 
 #all{
+    margin-top: 50px;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 10px;
     grid-template-columns: 100%;
     gap: 50px;
     place-items: center;
@@ -210,11 +211,11 @@ h3{
         margin: 10px;
     }
     .score {
-        width: 100vw;
+        width: 95vw;
     }
 
     #wlt{
-        font-size: 5vw;
+        font-size: 4vw;
     }
     
 }
